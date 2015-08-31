@@ -1,0 +1,22 @@
+[
+  {
+    "name":"Cool Dog",
+    "location":"../images/coolDog.jpg"
+  },
+  {
+    "name":"Eagle",
+    "location":"../images/eagle.jpg"
+  },
+  {
+    "name":"Guy",
+    "location":"../images/guy.jpg"
+  },
+  {
+    "name":"Owl",
+    "location":"../images/owl.gif"
+  },
+  {
+    "name":"Pinkie Pie",
+    "location":"../images/pinkiePie.gif"
+  }
+]
