@@ -2,6 +2,8 @@ extends layout
 block content
     h1= title
 
-    each val in haters
+
+    each val, index in haters
         #images
-        img(src=val.location)
+            img(src=val.location)
+            p= messages[index].message
