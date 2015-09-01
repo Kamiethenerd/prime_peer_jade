@@ -7,4 +7,9 @@ block content
         #images
             img(src=val.location)
             p= messages[index].message
-
+            form(name="add-message", method="post")
+                div.input
+                    span.label Add new message
+                    input(type="radio", name="id", class="hidden", checked="checked", value=messages[index].name)
+                    input(type="text", name="newMessage")
+                    input(type="submit", value="add" id="addMessage")
