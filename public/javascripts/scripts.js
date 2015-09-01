@@ -11,6 +11,7 @@ $(document).ready(function(){
 
             .done(function(data){
                 console.log(data);
+                location.reload(true);
             })
 
             .fail(function(jqXHR, textStatus, errorThrown){
@@ -19,9 +20,6 @@ $(document).ready(function(){
 
             .always(function(){
                 console.log('AJAX complete');
-                location.reload();
             })
-
-
     });
 });
