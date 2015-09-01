@@ -6,7 +6,7 @@ block content
     each val, index in haters
         #images
             img(src=val.location)
-            p= messages[index].message
+            = messages[index].message
             form(name="add-message", method="post")
                 div.input
                     span.label Add new message
