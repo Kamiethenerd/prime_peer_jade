@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('#addMessage').on('click', function(){
+    $('.addMessage').on('click', function(){
         $.ajax({
             type: 'GET',
             dataType: 'json',
