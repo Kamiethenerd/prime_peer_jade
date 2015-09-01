@@ -1,17 +1,13 @@
 $(document).ready(function(){
 
-    $('#addMessage').on('click', function(e){
-        //e.preventDefault();
-
+    $('#addMessage').on('click', function(){
         $.ajax({
             type: 'GET',
             dataType: 'json',
             url: '/memes/messages'
         })
-
             .done(function(data){
                 console.log(data);
-                location.reload(true);
             })
 
             .fail(function(jqXHR, textStatus, errorThrown){
@@ -20,6 +16,7 @@ $(document).ready(function(){
 
             .always(function(){
                 console.log('AJAX complete');
+                location.reload(true);
             })
     });
 });
