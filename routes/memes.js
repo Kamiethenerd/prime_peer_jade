@@ -3,14 +3,15 @@ var router = express.Router();
 var fs = require('fs');
 var path = require('path');
 var json = require('../models/memes');
-var messages =require('../models/messages');
+var messages = require('../models/messages');
 var parser = require('body-parser');
 
-var file = path.join(__dirname,"../models/messages.JSON");
+var file = path.join(__dirname, "../models/messages.JSON");
+var memesPage = path.join(__dirname, "../views/memes.jade");
 
 // get messages JSON file
 
-var routerGet = router.get('/messages', function(req, res, next){
+var routerGet = router.get('/messages', function (req, res, next) {
 
     fs.readFile(file, 'utf8', function (err, data) {
         if (err) return console.log(err);
@@ -20,7 +21,7 @@ var routerGet = router.get('/messages', function(req, res, next){
 });
 
 // renders page with JSON data
-router.get('/', function(req, res, next){
+router.get('/', function (req, res, next) {
 
     fs.readFile(file, 'utf8', function (err, data) {
         if (err) return console.log(err);
@@ -31,7 +32,7 @@ router.get('/', function(req, res, next){
 
 // post added content to JSON file
 
-router.post('/', function(req, res, next) {
+router.post('/', function (req, res, next) {
 
     console.log("sending message");
 
@@ -49,13 +50,13 @@ router.post('/', function(req, res, next) {
             }
         }
 
-        fs.writeFile(file, JSON.stringify(newArray) , 'utf-8', function (err) {
+        fs.writeFile(file, JSON.stringify(newArray), 'utf-8', function (err) {
             if (err) return console.log(err);
             console.log('Wrote Data');
         });
     });
 
-    //res.render('memes');
+    //res.render();
 });
 
 module.exports = router;

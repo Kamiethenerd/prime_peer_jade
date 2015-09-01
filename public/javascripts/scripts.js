@@ -19,6 +19,7 @@ $(document).ready(function(){
 
             .always(function(){
                 console.log('AJAX complete');
+                location.reload();
             })
 
 
